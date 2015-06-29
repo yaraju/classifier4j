@@ -13,14 +13,22 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
-//
-//configurations {
-//    testArtifacts.extendsFrom testRuntime
-//}
-//task testJar(type: Jar) {
-//    classifier "test"
-//    from sourceSets.test.output
-//}
-//artifacts {
-//    testArtifacts testJar
-//}
+
+task createPom << {
+    pom {
+        project {
+            groupId 'net.sf.classifier4J'
+            artifactId 'Classifier4J'
+            version '0.6'
+
+            inceptionYear '2003'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 1.1'
+                    url 'http://www.apache.org/licenses/LICENSE-1.1'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("pom.xml")
+}

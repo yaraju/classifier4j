@@ -15,3 +15,22 @@ dependencies {
     testCompile project( path: ':core', configuration: 'tests' )
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+task createPom << {
+    pom {
+        project {
+            groupId 'net.sf.classifier4J'
+            artifactId 'Classifier4J-Optional'
+            version '0.6'
+
+            inceptionYear '2003'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 1.1'
+                    url 'http://www.apache.org/licenses/LICENSE-1.1'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("pom.xml")
+}

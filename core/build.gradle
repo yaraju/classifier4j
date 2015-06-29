@@ -2,6 +2,7 @@ group 'net.sf.classifier4J'
 version '0.6-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'maven'
 
 sourceCompatibility = 1.5
 
@@ -25,4 +26,23 @@ configurations {
 
 artifacts {
     tests testJar
+}
+
+task createPom << {
+    pom {
+        project {
+            groupId 'net.sf.classifier4J'
+            artifactId 'Classifier4J'
+            version '0.6'
+
+            inceptionYear '2003'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 1.1'
+                    url 'http://www.apache.org/licenses/LICENSE-1.1'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("pom.xml")
 }
