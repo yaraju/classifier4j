@@ -4,7 +4,7 @@ Classifier4J is a Java library designed to do text classification. It comes with
 Fork from http://classifier4j.sourceforge.net/ (Authored by Nick Lothian)
 
 # License
-The software stands under Apache 2 License and comes with NO WARRANTY.
+The software stands under Apache 1.1 License and comes with NO WARRANTY.
 
 # Changes
 The build system has been switched to Gradle. Some (very minor) fixes have been made:
