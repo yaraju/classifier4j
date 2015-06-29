@@ -1,0 +1,25 @@
+group 'net.sf.classifier4J'
+version '0.6-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+//
+//configurations {
+//    testArtifacts.extendsFrom testRuntime
+//}
+//task testJar(type: Jar) {
+//    classifier "test"
+//    from sourceSets.test.output
+//}
+//artifacts {
+//    testArtifacts testJar
+//}

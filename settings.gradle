@@ -1,0 +1,4 @@
+rootProject.name = 'classifier4j'
+include ':core'
+include ':optional'
+
